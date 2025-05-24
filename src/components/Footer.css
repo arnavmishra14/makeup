@@ -1,0 +1,28 @@
+/* src/components/Footer.css */
+
+.footer {
+  background-color: #1c1c1c; /* Dark background */
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #ccc;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+
+  /* Fade-in animation */
+  opacity: 0;
+  animation: fadeInFooter 1s forwards;
+  animation-delay: 0.5s;
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeInFooter {
+  to {
+    opacity: 1;
+  }
+}
+
+.footer:hover {
+  color: #cc3366;
+  transition: color 0.3s ease;
+}
