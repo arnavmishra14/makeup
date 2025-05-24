@@ -1,47 +1,79 @@
-/* PageAnimation.css */
-
 /* Text container animation */
 .page > * {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUpText 0.8s forwards;
-    animation-timing-function: ease-out;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpText 0.8s forwards;
+  animation-timing-function: ease-out;
+}
+
+/* Stagger animation delay for children */
+.page > *:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.page > *:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUpText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Stagger animation delay for children */
-  .page > *:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  
-  .page > *:nth-child(2) {
-    animation-delay: 0.6s;
-  }
-  
-  /* Animation keyframes */
-  @keyframes fadeInUpText {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Increase spacing */
+}
+
+/* Increase spacing */
+.page h2 {
+  margin-bottom: 40px; /* More space below heading */
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.page p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+  max-width: 700px;
+}
+
+.page ul li {
+  margin-bottom: 15px; /* space between list items */
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .page h2 {
-    margin-bottom: 40px; /* More space below heading */
-    font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 30px;
   }
-  
+
   .page p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #444;
-    max-width: 700px;
-  }
-  .page ul li {
-    margin-bottom: 15px; /* space between list items */
     font-size: 1.1rem;
-    color: #444;
+    max-width: 100%;
   }
-  
-  
+
+  .page ul li {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page h2 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  .page p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .page ul li {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+}

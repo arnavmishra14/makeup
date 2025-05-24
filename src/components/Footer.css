@@ -1,5 +1,3 @@
-/* src/components/Footer.css */
-
 .footer {
   background-color: #1c1c1c; /* Dark background */
   text-align: center;
@@ -15,7 +13,6 @@
   animation-delay: 0.5s;
 }
 
-/* Keyframes for fade-in */
 @keyframes fadeInFooter {
   to {
     opacity: 1;
@@ -25,4 +22,19 @@
 .footer:hover {
   color: #cc3366;
   transition: color 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
 }
